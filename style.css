@@ -1,50 +1,118 @@
-/* Sama seperti sebelumnya + tambahan parallax, lang btn & loading */
-
-body {
-  background: linear-gradient(135deg, #0f0f0f, #1c1c1c);
-  overflow: hidden;
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+/* Background animasi gradient */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  height: 100vh;
+  background: linear-gradient(-45deg, #ff512f, #dd2476, #24c6dc, #514a9d);
+  background-size: 400% 400%;
+  animation: gradientBG 10s ease infinite;
+  color: white;
+  text-align: center;
+}
+
+/* Animasi gradient */
+@keyframes gradientBG {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+/* Loading screen */
 #loading {
   position: fixed;
-  top:0;left:0;width:100%;height:100%;
-  background: black;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  z-index: 100;
-}
-
-.lang {
-  margin-bottom: 15px;
-}
-
-.lang-btn {
-  background: #ff6b00;
-  border: none;
-  color: white;
-  padding: 6px 12px;
-  margin: 0 3px;
-  border-radius: 6px;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-.lang-btn:hover {
-  background: #ff944d;
-}
-
-.banner-container {
-  overflow: hidden;
-  border-radius: 10px;
-}
-
-.banner {
   width: 100%;
-  animation: zoom 12s infinite alternate ease-in-out;
+  height: 100%;
+  background: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+.loading-logo {
+  width: 120px;
+  animation: pulse 1.5s infinite;
+}
+#loading h2 {
+  color: white;
+  margin-top: 15px;
+}
+@keyframes pulse {
+  0% {transform: scale(1);}
+  50% {transform: scale(1.1);}
+  100% {transform: scale(1);}
 }
 
-@keyframes zoom {
-  from {transform: scale(1);}
-  to {transform: scale(1.1);}
+/* Container */
+.container {
+  padding: 20px;
+  animation: fadeIn 1.5s ease;
+}
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(20px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+/* Banner */
+.banner img {
+  width: 90%;
+  max-width: 1000px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.6);
+}
+
+/* Title */
+.title {
+  font-size: 3rem;
+  margin: 10px 0;
+  letter-spacing: 2px;
+}
+.subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  color: #f0f0f0;
+}
+
+/* Buttons */
+.buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+.btn {
+  background: rgba(255,255,255,0.1);
+  padding: 12px 25px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: 0.3s;
+}
+.btn img {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+}
+.btn:hover {
+  background: rgba(255,255,255,0.3);
+  transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+  margin-top: 40px;
+  font-size: 0.9rem;
+  opacity: 0.8;
 }
