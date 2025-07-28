@@ -1,69 +1,56 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GTRG Website</title>
+  <title>GTRG Reborn - Official Link</title>
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <!-- Banner -->
-  <div class="banner">
-    <img src="2701EE67-4E00-42A0-9B9A-5B64BA93AE26.jpeg" alt="Banner">
+  <!-- Loading Screen -->
+  <div id="loading">
+    <h2 class="glow">GTRG REBORN 2025</h2>
   </div>
 
-  <!-- Logo -->
-  <div class="logo">
-    <img src="IMG_2142.jpeg" alt="Logo GTRG">
+  <div class="container fade-in">
+    
+    <!-- Banner -->
+    <div class="banner-container">
+      <img src="2701EE67-4E00-42A0-9B9A-5B64BA93AE26.jpeg" class="banner" alt="Banner GTRG">
+    </div>
+
+    <!-- Icon -->
+    <img src="IMG_2142.jpeg" class="logo" alt="GTRG Logo">
+
+    <!-- Judul -->
+    <h1 class="glow" id="title">GTRG PRIVATE SERVER</h1>
+    <p class="desc" id="subtitle">Link resmi & komunitas GTRG Reborn 2025</p>
+
+    <!-- Pilih Bahasa -->
+    <div class="lang">
+      <button class="lang-btn" onclick="setLang('id')">🇮🇩 ID</button>
+      <button class="lang-btn" onclick="setLang('en')">🇺🇸 EN</button>
+    </div>
+
+    <!-- Tombol Sosial -->
+    <div class="links">
+      <a href="https://www.tiktok.com/@gtrgprivateserver" target="_blank">
+        <img src="IMG_2176.jpeg" alt="TikTok"> <span data-id="tiktok">TikTok</span>
+      </a>
+      <a href="https://discord.gg/uvh7qFEr8m" target="_blank">
+        <img src="IMG_2177.jpeg" alt="Discord"> <span data-id="discord">Discord</span>
+      </a>
+      <a href="https://chat.whatsapp.com/KvyQsULPX9EEpHyG6vic4O?mode=ac_t" target="_blank">
+        <img src="IMG_2179.jpeg" alt="WhatsApp"> <span data-id="wa">WhatsApp</span>
+      </a>
+    </div>
+
+    <!-- Footer -->
+    <p class="footer">© 2025 GTRG Reborn | All Rights Reserved</p>
   </div>
 
-  <!-- Tombol Bahasa -->
-  <div class="lang-switch">
-    <button onclick="setLanguage('id')">🇮🇩 Bahasa</button>
-    <button onclick="setLanguage('en')">🇬🇧 English</button>
-  </div>
-
-  <!-- Konten -->
-  <div class="content" id="content">
-    <h1>Selamat Datang di GTRG!</h1>
-    <p>Gabung komunitas kami sekarang juga!</p>
-  </div>
-
-  <!-- Tombol Sosial -->
-  <div class="social">
-    <a href="https://www.tiktok.com/@gtrgprivateserver" target="_blank">
-      <img src="IMG_2176.jpeg" alt="TikTok">
-    </a>
-    <a href="https://discord.gg/uvh7qFEr8m" target="_blank">
-      <img src="IMG_2177.jpeg" alt="Discord">
-    </a>
-    <a href="https://chat.whatsapp.com/KvyQsULPX9EEpHyG6vic4O?mode=ac_t" target="_blank">
-      <img src="IMG_2179.jpeg" alt="WhatsApp">
-    </a>
-  </div>
-
-  <!-- Tombol MediaFire -->
-  <div class="download">
-    <a href="https://www.mediafire.com/file/w8uysh0isgorw8n/GTRG.txt.txt/file" target="_blank">
-      ⬇️ Download File (MediaFire)
-    </a>
-  </div>
-
-  <script>
-    function setLanguage(lang) {
-      const content = document.getElementById("content");
-      if (lang === "id") {
-        content.innerHTML = `
-          <h1>Selamat Datang di GTRG!</h1>
-          <p>Gabung komunitas kami sekarang juga!</p>
-        `;
-      } else {
-        content.innerHTML = `
-          <h1>Welcome to GTRG!</h1>
-          <p>Join our community now!</p>
-        `;
-      }
-    }
-  </script>
+  <!-- Audio efek klik -->
+  <audio id="clickSound" src="click.mp3" preload="auto"></audio>
 </body>
 </html>
