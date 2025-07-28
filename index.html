@@ -3,51 +3,44 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GTRG REBORN</title>
+  <title>GTRG Reborn</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Loading Screen -->
-  <div id="loading">
-    <img src="img/IMG_2142.jpeg" alt="Logo GTRG" class="loading-logo">
+  <!-- LOADING SCREEN -->
+  <div id="loading-screen">
+    <div class="loader"></div>
     <h2>Loading...</h2>
   </div>
 
-  <!-- Main Content -->
-  <div class="container">
+  <!-- CONTENT -->
+  <div id="main-content" class="hidden">
     <!-- Banner -->
-    <div class="banner">
-      <img src="img/2701EE67-4E00-42A0-9B9A-5B64BA93AE26.jpeg" alt="Banner">
-    </div>
+    <header>
+      <img src="2701EE67-4E00-42A0-9B9A-5B64BA93AE26.jpeg" alt="Banner" class="banner glow">
+      <h1 id="title"></h1>
+    </header>
 
-    <!-- Title -->
-    <h1 class="title">GTRG REBORN</h1>
-    <p class="subtitle">The Most Premium GTPS in 2025</p>
+    <!-- Icons -->
+    <section class="icons">
+      <a href="https://www.tiktok.com/@gtrgprivateserver" target="_blank">
+        <img src="IMG_2176.jpeg" alt="TikTok" class="icon">
+      </a>
+      <a href="https://discord.gg/uvh7qFEr8m" target="_blank">
+        <img src="IMG_2177.jpeg" alt="Discord" class="icon">
+      </a>
+      <a href="https://chat.whatsapp.com/KvyQsULPX9EEpHyG6vic4O?mode=ac_t" target="_blank">
+        <img src="IMG_2179.jpeg" alt="WhatsApp" class="icon">
+      </a>
+    </section>
 
-    <!-- Buttons -->
-    <div class="buttons">
-      <a href="https://www.tiktok.com/@gtrgprivateserver" class="btn">
-        <img src="img/IMG_2176.jpeg" alt="TikTok Icon"> TikTok
-      </a>
-      <a href="https://discord.gg/uvh7qFEr8m" class="btn">
-        <img src="img/IMG_2177.jpeg" alt="Discord Icon"> Discord
-      </a>
-      <a href="https://chat.whatsapp.com/KvyQsULPX9EEpHyG6vic4O?mode=ac_t" class="btn">
-        <img src="img/IMG_2179.jpeg" alt="WhatsApp Icon"> WhatsApp
-      </a>
-    </div>
+    <!-- Footer -->
+    <footer>
+      <img src="IMG_2142.jpeg" alt="GTRG Logo" class="logo glow">
+      <p>© 2025 GTRG Reborn. All Rights Reserved.</p>
+    </footer>
   </div>
 
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 GTRG REBORN | All Rights Reserved</p>
-  </footer>
-
-  <script>
-    // Loading screen
-    window.addEventListener("load", () => {
-      document.getElementById("loading").style.display = "none";
-    });
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
