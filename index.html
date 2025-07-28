@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GTRG Official Links</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <img src="img/banner.jpg" alt="GTRG Banner" class="banner">
+
+    <h1 id="title">🌟 GTRG Official Links 🌟</h1>
+
+    <!-- Tombol Bahasa -->
+    <div class="lang-switch">
+      <button onclick="setLang('id')">🇮🇩 ID</button>
+      <button onclick="setLang('en')">🇬🇧 EN</button>
+    </div>
+
+    <div class="links">
+      <a href="https://chat.whatsapp.com/KvyQsULPX9EEpHyG6vic4O?mode=ac_t" class="btn">
+        <img src="img/icon-wa.png" alt="WA"> <span id="wa-text">Grup WhatsApp</span>
+      </a>
+      <a href="https://discord.gg/uvh7qFEr8m" class="btn">
+        <img src="img/icon-discord.png" alt="Discord"> <span id="dc-text">Join Discord</span>
+      </a>
+      <a href="https://www.mediafire.com/file/w8uysh0isgorw8n/GTRG.txt.txt/file" class="btn">
+        <img src="img/icon-gtrg.png" alt="Download"> <span id="dl-text">Download Server</span>
+      </a>
+    </div>
+  </div>
+
+  <script>
+    const langText = {
+      id: {
+        title: "🌟 GTRG Link Resmi 🌟",
+        wa: "Grup WhatsApp",
+        dc: "Join Discord",
+        dl: "Download Server"
+      },
+      en: {
+        title: "🌟 GTRG Official Links 🌟",
+        wa: "WhatsApp Group",
+        dc: "Join Discord",
+        dl: "Download Server"
+      }
+    };
+
+    function setLang(lang) {
+      document.getElementById("title").innerText = langText[lang].title;
+      document.getElementById("wa-text").innerText = langText[lang].wa;
+      document.getElementById("dc-text").innerText = langText[lang].dc;
+      document.getElementById("dl-text").innerText = langText[lang].dl;
+    }
+  </script>
+</body>
+</html>
