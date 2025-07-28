@@ -1,40 +1,69 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GTRG Website</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GTRG Website</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Banner -->
+  <div class="banner">
+    <img src="2701EE67-4E00-42A0-9B9A-5B64BA93AE26.jpeg" alt="Banner">
+  </div>
 
-    <!-- Banner -->
-    <div class="banner">
-        <img src="img/2701EE67-4E00-42A0-9B9A-5B64BA93AE26.jpeg" alt="GTRG Banner">
-    </div>
+  <!-- Logo -->
+  <div class="logo">
+    <img src="IMG_2142.jpeg" alt="Logo GTRG">
+  </div>
 
-    <!-- Icon utama -->
-    <div class="logo">
-        <img src="img/IMG_2142.jpeg" alt="GTRG Icon">
-        <h1>GTRG ONLINE</h1>
-    </div>
+  <!-- Tombol Bahasa -->
+  <div class="lang-switch">
+    <button onclick="setLanguage('id')">🇮🇩 Bahasa</button>
+    <button onclick="setLanguage('en')">🇬🇧 English</button>
+  </div>
 
-    <!-- Link Buttons -->
-    <div class="links">
-        <a href="https://chat.whatsapp.com/KvyQsULPX9EEpHyG6vic4O?mode=ac_t" class="btn">
-            <img src="img/IMG_2179.jpeg" alt="WhatsApp Icon"> WhatsApp Group
-        </a>
-        <a href="https://discord.gg/uvh7qFEr8m" class="btn">
-            <img src="img/IMG_2177.jpeg" alt="Discord Icon"> Discord
-        </a>
-        <a href="https://www.tiktok.com/@gtrg_official" class="btn">
-            <img src="img/IMG_2176.jpeg" alt="Tiktok Icon"> TikTok
-        </a>
-    </div>
+  <!-- Konten -->
+  <div class="content" id="content">
+    <h1>Selamat Datang di GTRG!</h1>
+    <p>Gabung komunitas kami sekarang juga!</p>
+  </div>
 
-    <footer>
-        <p>© 2025 GTRG Server. All Rights Reserved.</p>
-    </footer>
+  <!-- Tombol Sosial -->
+  <div class="social">
+    <a href="https://www.tiktok.com/@gtrgprivateserver" target="_blank">
+      <img src="IMG_2176.jpeg" alt="TikTok">
+    </a>
+    <a href="https://discord.gg/uvh7qFEr8m" target="_blank">
+      <img src="IMG_2177.jpeg" alt="Discord">
+    </a>
+    <a href="https://chat.whatsapp.com/KvyQsULPX9EEpHyG6vic4O?mode=ac_t" target="_blank">
+      <img src="IMG_2179.jpeg" alt="WhatsApp">
+    </a>
+  </div>
 
+  <!-- Tombol MediaFire -->
+  <div class="download">
+    <a href="https://www.mediafire.com/file/w8uysh0isgorw8n/GTRG.txt.txt/file" target="_blank">
+      ⬇️ Download File (MediaFire)
+    </a>
+  </div>
+
+  <script>
+    function setLanguage(lang) {
+      const content = document.getElementById("content");
+      if (lang === "id") {
+        content.innerHTML = `
+          <h1>Selamat Datang di GTRG!</h1>
+          <p>Gabung komunitas kami sekarang juga!</p>
+        `;
+      } else {
+        content.innerHTML = `
+          <h1>Welcome to GTRG!</h1>
+          <p>Join our community now!</p>
+        `;
+      }
+    }
+  </script>
 </body>
 </html>
