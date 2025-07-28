@@ -3,54 +3,51 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GTRG Reborn - Official Link</title>
+  <title>GTRG REBORN</title>
   <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
 </head>
 <body>
   <!-- Loading Screen -->
   <div id="loading">
-    <h2 class="glow">GTRG REBORN 2025</h2>
+    <img src="img/IMG_2142.jpeg" alt="Logo GTRG" class="loading-logo">
+    <h2>Loading...</h2>
   </div>
 
-  <div class="container fade-in">
-    
+  <!-- Main Content -->
+  <div class="container">
     <!-- Banner -->
-    <div class="banner-container">
-      <img src="2701EE67-4E00-42A0-9B9A-5B64BA93AE26.jpeg" class="banner" alt="Banner GTRG">
+    <div class="banner">
+      <img src="img/2701EE67-4E00-42A0-9B9A-5B64BA93AE26.jpeg" alt="Banner">
     </div>
 
-    <!-- Icon -->
-    <img src="IMG_2142.jpeg" class="logo" alt="GTRG Logo">
+    <!-- Title -->
+    <h1 class="title">GTRG REBORN</h1>
+    <p class="subtitle">The Most Premium GTPS in 2025</p>
 
-    <!-- Judul -->
-    <h1 class="glow" id="title">GTRG PRIVATE SERVER</h1>
-    <p class="desc" id="subtitle">Link resmi & komunitas GTRG Reborn 2025</p>
-
-    <!-- Pilih Bahasa -->
-    <div class="lang">
-      <button class="lang-btn" onclick="setLang('id')">🇮🇩 ID</button>
-      <button class="lang-btn" onclick="setLang('en')">🇺🇸 EN</button>
-    </div>
-
-    <!-- Tombol Sosial -->
-    <div class="links">
-      <a href="https://www.tiktok.com/@gtrgprivateserver" target="_blank">
-        <img src="IMG_2176.jpeg" alt="TikTok"> <span data-id="tiktok">TikTok</span>
+    <!-- Buttons -->
+    <div class="buttons">
+      <a href="https://www.tiktok.com/@gtrgprivateserver" class="btn">
+        <img src="img/IMG_2176.jpeg" alt="TikTok Icon"> TikTok
       </a>
-      <a href="https://discord.gg/uvh7qFEr8m" target="_blank">
-        <img src="IMG_2177.jpeg" alt="Discord"> <span data-id="discord">Discord</span>
+      <a href="https://discord.gg/uvh7qFEr8m" class="btn">
+        <img src="img/IMG_2177.jpeg" alt="Discord Icon"> Discord
       </a>
-      <a href="https://chat.whatsapp.com/KvyQsULPX9EEpHyG6vic4O?mode=ac_t" target="_blank">
-        <img src="IMG_2179.jpeg" alt="WhatsApp"> <span data-id="wa">WhatsApp</span>
+      <a href="https://chat.whatsapp.com/KvyQsULPX9EEpHyG6vic4O?mode=ac_t" class="btn">
+        <img src="img/IMG_2179.jpeg" alt="WhatsApp Icon"> WhatsApp
       </a>
     </div>
-
-    <!-- Footer -->
-    <p class="footer">© 2025 GTRG Reborn | All Rights Reserved</p>
   </div>
 
-  <!-- Audio efek klik -->
-  <audio id="clickSound" src="click.mp3" preload="auto"></audio>
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 GTRG REBORN | All Rights Reserved</p>
+  </footer>
+
+  <script>
+    // Loading screen
+    window.addEventListener("load", () => {
+      document.getElementById("loading").style.display = "none";
+    });
+  </script>
 </body>
 </html>
