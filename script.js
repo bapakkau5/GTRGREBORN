@@ -1,18 +1,8 @@
-// LOADING SCREEN
-window.addEventListener("load", () => {
-  document.getElementById("loading-screen").style.display = "none";
-  document.getElementById("main-content").classList.remove("hidden");
+// Animasi Fade In
+document.addEventListener("DOMContentLoaded", () => {
+  document.body.style.opacity = "0";
+  setTimeout(() => {
+    document.body.style.transition = "opacity 1.2s";
+    document.body.style.opacity = "1";
+  }, 100);
 });
-
-// TYPING ANIMATION TITLE
-const text = "🔥 WELCOME TO GTRG REBORN 🔥";
-let i = 0;
-const speed = 100;
-function typeEffect() {
-  if (i < text.length) {
-    document.getElementById("title").innerHTML += text.charAt(i);
-    i++;
-    setTimeout(typeEffect, speed);
-  }
-}
-window.onload = typeEffect;
