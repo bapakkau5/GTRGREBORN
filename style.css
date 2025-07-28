@@ -1,58 +1,50 @@
+/* Sama seperti sebelumnya + tambahan parallax, lang btn & loading */
+
 body {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
-  background: #000;
-  color: #fff;
-  text-align: center;
+  background: linear-gradient(135deg, #0f0f0f, #1c1c1c);
+  overflow: hidden;
 }
 
-.banner img {
-  width: 100%;
-  max-height: 300px;
-  object-fit: cover;
+#loading {
+  position: fixed;
+  top:0;left:0;width:100%;height:100%;
+  background: black;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  z-index: 100;
 }
 
-.logo img {
-  width: 120px;
-  margin: 20px auto;
+.lang {
+  margin-bottom: 15px;
 }
 
-.lang-switch button {
-  margin: 5px;
-  padding: 8px 12px;
+.lang-btn {
+  background: #ff6b00;
   border: none;
-  background: #ff9900;
-  color: #fff;
-  font-weight: bold;
+  color: white;
+  padding: 6px 12px;
+  margin: 0 3px;
   border-radius: 6px;
   cursor: pointer;
-}
-
-.content {
-  margin-top: 15px;
-}
-
-.social {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  margin: 20px 0;
-}
-
-.social img {
-  width: 60px;
-  height: 60px;
-  border-radius: 12px;
-  object-fit: cover;
-}
-
-.download a {
-  display: inline-block;
-  padding: 10px 20px;
-  background: #ff0000;
-  color: white;
   font-weight: bold;
-  border-radius: 8px;
-  text-decoration: none;
+}
+
+.lang-btn:hover {
+  background: #ff944d;
+}
+
+.banner-container {
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.banner {
+  width: 100%;
+  animation: zoom 12s infinite alternate ease-in-out;
+}
+
+@keyframes zoom {
+  from {transform: scale(1);}
+  to {transform: scale(1.1);}
 }
